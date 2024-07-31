@@ -1,0 +1,22 @@
+{
+  "name": "junkisti-si-politisti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junkisti/Junkisti-si-Politisti.git"
+  },
+  "author": "Hakuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junkisti/Junkisti-si-Politisti/issues"
+  },
+  "homepage": "https://github.com/Junkisti/Junkisti-si-Politisti#readme",
+  "dependencies": {
+    "firebase": "^10.12.4"
+  }
+}
