@@ -1,9 +1,14 @@
 const path = require('path');
 
 module.exports = {
-    entry: "./JS/app.js",
+    entry: "./src/app.js",
     output: {
         filename: "JunkistiApp.js",
         path: path.resolve(__dirname, "dist")
+    },
+
+    devServer: {
+        static: "./",
+        port: 9000
     }
 }
