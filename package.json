@@ -1,22 +1,27 @@
 {
-  "name": "junkisti-si-politisti",
+  "name": "Junkisti.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Junkisti/Junkisti-si-Politisti.git"
+    "url": "git+https://github.com/Junkisti/Junkisti.github.io.git"
   },
   "author": "Hakuo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Junkisti/Junkisti-si-Politisti/issues"
+    "url": "https://github.com/Junkisti/Junkisti.github.io/issues"
   },
-  "homepage": "https://github.com/Junkisti/Junkisti-si-Politisti#readme",
+  "homepage": "https://github.com/Junkisti/Junkisti.github.io#readme",
   "dependencies": {
     "firebase": "^10.12.4"
+  },
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   }
 }
