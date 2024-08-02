@@ -32,7 +32,7 @@ body { overflow: hidden;}
         border-width .5s ease-in-out .4s;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-flow: column;
     overflow: hidden;
@@ -73,6 +73,14 @@ body { overflow: hidden;}
 
 
 /* general elements */
+#game-title{
+    font-size: 6rem;
+    text-shadow: 5px 4px var(--accent2);
+}
+#game-subtitle{
+    font-size: 3rem;
+}
+
 .form{
     display: flex;
     flex-flow: column;
