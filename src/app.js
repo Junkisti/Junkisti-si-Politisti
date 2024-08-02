@@ -50,11 +50,13 @@ signInAnonymously(auth)
 adjustFontColor()
 glow()
 
-function enterGame() {
+function enterGame(event) { 
+    event.preventDefault(); 
+    console.log(1);
     const start_page = document.getElementById('start-page')
     const game_page = document.getElementById('game-page')
     start_page.classList.add('hidden')
     game_page.classList.remove('hidden')
 }
-document.getElementById("start-button").onclick = enterGame;
-document.getElementById("pregame-form").onsubmit = enterGame;
+
+document.getElementById('pregame-form').addEventListener('submit', enterGame);
