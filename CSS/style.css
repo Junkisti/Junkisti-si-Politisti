@@ -119,6 +119,9 @@ body { overflow: hidden;}
     .form-question-input-text{
         font-size: 1.4rem;
     }
+    #game-title{ font-size: 3rem; }
+    
+    #game-subtitle{ display: none; }
 }
 @media (max-width: 720px) {
     .form-question{
@@ -126,6 +129,9 @@ body { overflow: hidden;}
         align-items: center;
 
     }
+    #game-title{ font-size: 4rem; }
+    
+    #game-subtitle{ display: 1.8rem; }
 }
 button{
     background-color: var(--main1);
