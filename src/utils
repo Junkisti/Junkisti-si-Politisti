@@ -1,0 +1,24 @@
+export function adjustFontColor(){
+    const texts = document.getElementsByClassName('auto-color')
+    Array.prototype.forEach.call( texts, function( text){
+        text.classList.remove('dark-font', 'light-font')
+        let parent = text.parentNode
+        while (true){
+            const [R, G, B, A] = getComputedStyle( parent)
+                .getPropertyValue( 'background-color')
+                .match( /\d+/g);
+
+            if (A === '0') {
+                parent = parent.parentNode
+                if (parent === document) break
+                continue
+            }
+
+            const L = R*.299 + G*.587 + B*.114
+
+            if (L < 150) text.classList.add('light-font')
+            else text.classList.add('dark-font')
+            break
+        }
+    });
+}
