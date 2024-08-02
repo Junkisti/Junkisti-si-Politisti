@@ -52,6 +52,8 @@ glow()
 
 function enterGame() {
     const start_page = document.getElementById('start-page')
+    const game_page = document.getElementById('game-page')
     start_page.classList.add('hidden')
+    game_page.classList.remove('hidden')
 }
 document.getElementById("start-button").onclick = enterGame;
