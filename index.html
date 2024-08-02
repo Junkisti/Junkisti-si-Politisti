@@ -9,17 +9,17 @@
     <title>Junkisti VS Politisti</title>
 </head>
 <body>
-    <div id="start-body" class="page">
+    <div id="start-page" class="page">
         <div class="form">
             <div class="form-question">
                 <p class="form-question-label auto-color">Nickname:</p> <input type="text" class="form-question-input-text auto-color" maxlength="16" placeholder="length < age of consent">
             </div>
             <div class="form-question">
-                <p class="form-question-label auto-color">Game code:</p> <input type="text" class="form-question-input-text auto-color" maxlength="16" placeholder="leave empty to host">
+                <p class="form-question-label auto-color">Game code:</p> <input type="text" class="form-question-input-text auto-color" maxlength="8" placeholder="leave empty to host" oninput="this.value = this.value.replace(/[^0-9]/g, '')" >
             </div>
         </div>
-        <button> Start lying </button>
+        <button id="start-button"> Start lying </button>
     </div>
-    <div id="game-body" class="page hidden"></div>
+    <div id="game-page" class="page"></div>
 </body>
 </html>

@@ -48,3 +48,9 @@ signInAnonymously(auth)
     });
 
 adjustFontColor()
+
+function enterGame() {
+    const start_page = document.getElementById('start-page')
+    start_page.classList.add('hidden')
+}
+document.getElementById("start-button").onclick = enterGame;

@@ -2,11 +2,13 @@
 
 html, body { height: 100%; }
 
+body { overflow: hidden;}
+
 :root{
     --main1: hsla(210, 65%, 8%);
     --dark: hsla(210, 90%, 5%);
     --light: hsla(210, 20%, 70%);
-    --accent: hsla(100, 10%, 10%);
+    --accent: hsl(210, 55%, 60%);
     --fade: hsla(100, 10%, 10%, .2);
 
     --light-font: hsl(217, 15%, 75%);
@@ -16,17 +18,24 @@ html, body { height: 100%; }
 .page{
     box-sizing: border-box;
     height: 100%;
+    border: 6px dashed var(--light);
     padding: 24px;
     gap: 48px;
 
     background-color: var(--dark);
 }
 
-#start-body{
+#start-page{
+    transition: 
+        height 1s ease-in-out,
+        padding 1s ease-in-out,
+        border-width .5s ease-in-out .4s;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    overflow: hidden;
 
     button{
         font-size: 2rem;
@@ -63,7 +72,11 @@ button{
 
 /* helper classes */
 
-.hidden{ display: none; }
+.hidden{
+    height: 0;
+    padding: 0;
+    border-width: 0;
+}
 
 .light-font { color: var(--light-font); }
 .dark-font { color: var(--dark-font); }
