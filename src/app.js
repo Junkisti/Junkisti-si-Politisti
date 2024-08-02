@@ -57,3 +57,4 @@ function enterGame() {
     game_page.classList.remove('hidden')
 }
 document.getElementById("start-button").onclick = enterGame;
+document.getElementById("pregame-form").onsubmit = enterGame;
