@@ -38,6 +38,8 @@ body { overflow: hidden;}
     flex-flow: column;
     overflow: hidden;
 
+    position: relative;
+
     /* box-shadow: inset -10px -10px var(--accent2); */
 
     button{
