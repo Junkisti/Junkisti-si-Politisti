@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "firebase/auth";
-import { adjustFontColor } from "./utils";
+import { adjustFontColor, glow } from "./utils";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -48,6 +48,7 @@ signInAnonymously(auth)
     });
 
 adjustFontColor()
+glow()
 
 function enterGame() {
     const start_page = document.getElementById('start-page')

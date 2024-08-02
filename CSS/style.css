@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; }
 
-html, body { height: 100%; }
+html, body { height: 100dvh; }
 
 body { overflow: hidden;}
 
@@ -65,12 +65,66 @@ body { overflow: hidden;}
 
     background-color: var(--main1);
     border: 1px solid var(--light);
+    border-radius: 4px;
+
+    position: relative;
 }
 button{
+    background-color: var(--main1);
 
+    position: relative;
+
+    padding: 8px;
+    border: 1px solid var(--light);
+    border-radius: 4px;
+
+    cursor: pointer;
 }
 
 /* helper classes */
+
+.glow-wrapper{
+
+    --glow-width: auto;
+    --glow-height: auto;
+
+    border: 1px solid hsl(261 80% 30%);;
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow: 3px 3px hsl(261 80% 30%);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: scale .3s, transform .3s;
+
+    &::before{
+        content: '';
+        position: absolute;
+
+        aspect-ratio: 1;
+        height: var(--glow-height);
+        width: var(--glow-width);
+
+        top: var(--y);
+        left: var(--x);
+        transform: translate(-50%, -50%);
+
+        background: radial-gradient(var(--light), transparent 66%);
+        opacity: 0;
+    }
+    &:hover::before{
+        opacity: 1;
+    }
+    &:has(button){
+        --glow-height: 200%;
+        &:hover{
+            transform: translate(4px, -4px);
+            scale: 1.05;
+        }
+    }
+    &:has(.form-question-input-text){ --glow-height: 200%; }
+}
 
 .hidden{
     height: 0;
