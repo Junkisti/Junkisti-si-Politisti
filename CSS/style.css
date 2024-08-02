@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; }
 
-html, body { height: 100dvh; }
+html, body { height: 100dvh; background-color: var(--dark); }
 
 body { overflow: hidden;}
 
@@ -9,6 +9,7 @@ body { overflow: hidden;}
     --dark: hsla(210, 90%, 5%);
     --light: hsla(210, 20%, 70%);
     --accent: hsl(210, 55%, 60%);
+    --accent2:  hsl(261 80% 30%);
     --fade: hsla(100, 10%, 10%, .2);
 
     --light-font: hsl(217, 15%, 75%);
@@ -37,8 +38,35 @@ body { overflow: hidden;}
     flex-flow: column;
     overflow: hidden;
 
+    /* box-shadow: inset -10px -10px var(--accent2); */
+
     button{
         font-size: 2rem;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: var(--accent2);
+        width: 5%;
+        aspect-ratio: .3;
+        right: 0;
+        bottom: 100px;
+        transform: translate(50%, 50%) rotateZ(35deg);
+        box-shadow: -20px -20px 200px 200px var(--accent2);
+        opacity: .06;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        background-color: var(--accent2);
+        width: 5%;
+        aspect-ratio: .3;
+        right: 100px;
+        bottom: 0;
+        transform: translate(50%, 50%) rotateZ(55deg);
+        box-shadow: -20px -20px 200px 200px var(--accent2);
+        opacity: .06;
     }
 }
 
@@ -102,28 +130,27 @@ button{
     --glow-width: auto;
     --glow-height: auto;
 
-    border: 1px solid hsl(261 80% 30%);;
+    border: 1px solid var(--accent2);
     border-radius: 4px;
     padding: 4px;
-    box-shadow: 3px 3px hsl(261 80% 30%);
+    box-shadow: 3px 3px var(--accent2);
 
     position: relative;
     overflow: hidden;
 
-    transition: scale .3s, transform .3s;
-
+    
     &::before{
         content: '';
         position: absolute;
-
+        
         aspect-ratio: 1;
         height: var(--glow-height);
         width: var(--glow-width);
-
+        
         top: var(--y);
         left: var(--x);
         transform: translate(-50%, -50%);
-
+        
         background: radial-gradient(var(--light), transparent 66%);
         opacity: 0;
     }
@@ -132,9 +159,12 @@ button{
     }
     &:has(button){
         --glow-height: 200%;
+
+        transform-origin: center;
+        transition: scale 1s, transform .3s;
         &:hover{
-            transform: translate(4px, -4px);
-            scale: 1.05;
+            transform: translateY(-3px);
+            scale: 1.07;
         }
     }
     &:has(.form-question-input-text){ --glow-height: 200%; }
