@@ -35,7 +35,8 @@ body { overflow: hidden;}
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    overflow: hidden;
+    /* overflow: hidden; */
+    min-width: fit-content;
 
     button{
         font-size: 2rem;
@@ -52,12 +53,14 @@ body { overflow: hidden;}
 .form-question{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 16px;
 }
 .form-question-label{
     font-size: 2rem;
 }
 .form-question-input-text{
+    min-width: none;
     height: 2.5rem;
 
     font-size: 2rem;
@@ -65,6 +68,10 @@ body { overflow: hidden;}
 
     background-color: var(--main1);
     border: 1px solid var(--light);
+
+    @media (max-width: 420px) {
+        background-color: red;
+    }
 }
 button{
 
