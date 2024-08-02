@@ -10,23 +10,35 @@
 </head>
 <body>
     <div id="start-page" class="page">
-        <div class="form">
+        <!-- Form contai -->
+        <form class="form">
             <div class="form-question">
                 <p class="form-question-label auto-color">Nickname:</p>
                 <div class="glow-wrapper">
-                    <input type="text" class="form-question-input-text auto-color" maxlength="16" placeholder="length < age of consent">
+                    <input type="text" 
+                        class="form-question-input-text auto-color"
+                        maxlength="10"
+                        placeholder="Length > Age of Consent"
+                        onfocus="this.placeholder = ''"
+                        onblur="this.placeholder='Length > Age of Consent'"
+                    >
                 </div>
             </div>
             <div class="form-question">
-                <p class="form-question-label auto-color">Game code:</p>
+                <p class="form-question-label auto-color">Game Code:</p>
                 <div class="glow-wrapper">
-                    <input type="text" class="form-question-input-text auto-color" maxlength="8" placeholder="leave empty to host" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')" >
+                    <input type="text"
+                    class="form-question-input-text auto-color"
+                    maxlength="8" placeholder="Leave Empty to Host"
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder='Leave Empty to Host'"
+                    inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                >
                 </div>
                 
             </div>
-        </div>
-        <div class="glow-wrapper"><button id="start-button" class="auto-color"> START LYING </button></div>
-        
+            <div class="glow-wrapper"><button id="start-button" class="auto-color" type="submit"> START LYING </button></div>
+        </form>
     </div>
     <div id="game-page" class="hidden page"></div>
 </body>

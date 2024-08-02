@@ -21,7 +21,6 @@ body { overflow: hidden;}
     height: 100%;
     border: 6px dashed var(--light);
     padding: 24px;
-    gap: 48px;
 
     background-color: var(--dark);
 }
@@ -79,6 +78,13 @@ body { overflow: hidden;}
     flex-flow: column;
     gap: 8px;
     max-width: 100%;
+
+    padding: 20px;
+
+    .glow-wrapper:has(button){
+        margin-top: 24px;
+        align-self: center;
+    }
 }
 .form-question{
     display: flex;
@@ -136,6 +142,8 @@ button{
     border-radius: 4px;
     padding: 4px;
     box-shadow: 3px 3px var(--accent2);
+    width: fit-content;
+    height: fit-content;
 
     position: relative;
     overflow: hidden;
