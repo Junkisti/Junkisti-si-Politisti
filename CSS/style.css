@@ -68,6 +68,8 @@ body { overflow: hidden;}
     background-color: var(--main1);
     border: 1px solid var(--light);
 
+    position: relative;
+
 }
 @media (max-width: 420px) {
     .form-question-input-text{
