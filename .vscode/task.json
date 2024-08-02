@@ -1,0 +1,12 @@
+{
+    "command": "npm",
+    "isShellCommand": true,
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "bundle",
+            "args": ["run", "build"],
+            "isBuildCommand": true
+        }
+    ]
+}

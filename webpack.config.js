@@ -10,5 +10,7 @@ module.exports = {
     devServer: {
         static: "./",
         port: 9000
-    }
+    },
+
+    mode: "production"
 }
