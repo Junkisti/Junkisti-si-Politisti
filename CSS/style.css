@@ -48,6 +48,7 @@ body { overflow: hidden;}
     display: flex;
     flex-flow: column;
     gap: 8px;
+    max-width: 100%;
 }
 .form-question{
     display: flex;
@@ -58,6 +59,7 @@ body { overflow: hidden;}
     font-size: 2rem;
 }
 .form-question-input-text{
+    max-width: 100%;
     height: 2.5rem;
 
     font-size: 2rem;
@@ -65,6 +67,19 @@ body { overflow: hidden;}
 
     background-color: var(--main1);
     border: 1px solid var(--light);
+
+}
+@media (max-width: 420px) {
+    .form-question-input-text{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 720px) {
+    .form-question{
+        flex-flow: column;
+        align-items: center;
+
+    }
 }
 button{
 
